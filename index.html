@@ -6,29 +6,14 @@
 
 <meta charset="UTF-8">  
 
-<title>GetUserMedia实例</title>  
+<title>Welcome</title>  
 
 </head>  
 
 <body>  
+  <h3>欢迎访问</h3>
 
-<video id="video" autoplay><ideo>  
 
 </body>  
-
-<script type="text/javascript">  
-var constraints = { audio: true, video:true };
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.getElementById('video');   
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); 
-
-</script>  
 
 <html>
