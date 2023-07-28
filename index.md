@@ -369,13 +369,13 @@ SDK提供的H5基础方法包括：
 | 方法名 | 说明                 | 参数                                      | 备注                                           |
 | --- |--------------------|-----------------------------------------|----------------------------------------------|
 | setStatusBarColor | 同步方法，设置状态栏颜色       | ```{color:"#FFFFFF"}```                 |                                              |
-| showLoading | 同步方法，显示loading     | ```{content:"加载中"}```                   |                                              |
+| showLoading | 同步方法，显示loading     | "正在加载..."                               |                                              |
 | hideLoading | 同步方法，隐藏loading     | ""                                      |                                              |
 | closeWindow | 同步方法，关闭当前Web       | "" 或 ```{resultCode:0,resultData:""}``` | 当参数不为空是参数会被解析给上层界面                           |
 | openNewWindow | 异步方法,打开新页面         | 参考**打开H5打开示例**                          | 回调接收closeWindow返回的数据                         |
 | onBackPressed | 同步方法，设置拦截原生返回键监听方法 | "onBackPressed"，当参数为""时，清除当前回调拦截        | 监听回调的方法需要返回boolean类型，true:拦截当前操作；**请合理清除回调** |
-| goBack | 同步方法，操作后退          |         |  |
-| goForward | 同步方法，操作前进          |         |  |
+| goBack | 同步方法，操作后退          |                                         |  |
+| goForward | 同步方法，操作前进          |                                         |  |
 
 模块名: cacheApi(全为同步方法)，永久缓存可以跨进程，受限于CacheManager.init(context:
 Application,processMode:CacheProcessMode)
@@ -395,8 +395,3 @@ memory:内存缓存和APP同生命周期；
 | saveCache | 永久缓存 | ```{key:"",value:""}``` |  |
 | getCache | 永久缓存 | key                     |  |
 | removeCache | 永久缓存 | key                     |  |
-
-
-
-
-
