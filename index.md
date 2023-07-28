@@ -1,5 +1,8 @@
 # **Base** 是一个用于Android快速开发框架，主要包含：
++ ## [Android 原生开发框架](#Android-原生开发框架)
++ ## [Web 支持的API模块](#Web-支持的API模块)
 
+## Android 原生开发框架 <a id="Android-原生开发框架"></a>
 ### 网络请求
 
 NetApi.httpClient网络请求对象，可被自定义OkHttpClient对象。当不设置的NetApi.httpClient的时候默认采用以下配置：
@@ -138,6 +141,7 @@ launch {
 ```
 
 推荐该方式，更简便，该方式可以处理特定的错误，但更推荐在全局错误，除非是需要根据特定的错误完成特定的动作。
+
 
 ### 缓存管理（键值对）
 
@@ -315,7 +319,8 @@ WebAppConfig("https://www.baidu.com/").apply {
     mergeStatusBar = false
 }
 ```
-
+## Web 支持的API模块
+<a id="Web-支持的API模块"></a>
 H5调用原生方法：
 
 调用baseApi的showToast(示例)同步方法，
@@ -360,13 +365,14 @@ SDK提供的H5基础方法包括：
 
 模块名: controlApi
 
-| 方法名 | 说明        | 参数                                    | 备注                   |
-| --- |-----------|---------------------------------------|----------------------|
-| setStatusBarColor | 同步方法，设置状态栏颜色 | ```{color:"#FFFFFF"}```               |                      |
-| showLoading | 同步方法，显示loading  | ```{content:"加载中"}```                 |                      |
-| hideLoading | 同步方法，隐藏loading  | ""                                    |                      |
-| closeWindow | 同步方法，关闭当前Web | "" 或 ```{resultCode:0,resultData:""}``` | 当参数不为空是参数会被解析给上层界面   |
-| openNewWindow | 异步方法,打开新页面 | 参考**打开H5打开示例** | 回调接收closeWindow返回的数据 |
+| 方法名 | 说明                 | 参数                                      | 备注                                           |
+| --- |--------------------|-----------------------------------------|----------------------------------------------|
+| setStatusBarColor | 同步方法，设置状态栏颜色       | ```{color:"#FFFFFF"}```                 |                                              |
+| showLoading | 同步方法，显示loading     | ```{content:"加载中"}```                   |                                              |
+| hideLoading | 同步方法，隐藏loading     | ""                                      |                                              |
+| closeWindow | 同步方法，关闭当前Web       | "" 或 ```{resultCode:0,resultData:""}``` | 当参数不为空是参数会被解析给上层界面                           |
+| openNewWindow | 异步方法,打开新页面         | 参考**打开H5打开示例**                          | 回调接收closeWindow返回的数据                         |
+| onBackPressed | 同步方法，设置拦截原生返回键监听方法 | "onBackPressed"，当参数为""时，清除当前回调拦截        | 监听回调的方法需要返回boolean类型，true:拦截当前操作；**请合理清除回调** |
 
 模块名: cacheApi(全为同步方法)，永久缓存可以跨进程，受限于CacheManager.init(context:
 Application,processMode:CacheProcessMode)
@@ -386,8 +392,3 @@ memory:内存缓存和APP同生命周期；
 | saveCache | 永久缓存 | ```{key:"",value:""}``` |  |
 | getCache | 永久缓存 | key                     |  |
 | removeCache | 永久缓存 | key                     |  |
-
-
-
-
-
