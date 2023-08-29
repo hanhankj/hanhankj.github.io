@@ -5,10 +5,10 @@
 <a id="Android-原生开发框架"></a>
 ## Android 原生开发框架 
 <span style="color: red;font-weight: bold; font-size:35px">该SDK需要授权使用，授权需要提供一下信息：
-</br>1、应用名称
-</br>2、应用包名(applicationId)
-</br>3、应用签名SHA1值，例如：58:28:F7:15:9D:AE:D0:27:55:04:6C:E3:47:87:A0:F3:06:81:77:E6
-</br>请把以上信息发送到邮箱：<a  href="mailto:523716476@qq.com?subject=申请应用授权">523716476@qq.com</a>
+<br>1、应用名称
+<br>2、应用包名(applicationId)
+<br>3、应用签名SHA1值，例如：58:28:F7:15:9D:AE:D0:27:55:04:6C:E3:47:87:A0:F3:06:81:77:E6
+<br>请把以上信息发送到邮箱：<a  href="mailto:523716476@qq.com?subject=申请应用授权">523716476@qq.com</a>
 </span>
 ### 网络请求
 
