@@ -4,6 +4,12 @@
 
 <a id="Android-原生开发框架"></a>
 ## Android 原生开发框架 
+<span style="color: red;font-weight: bold; font-size:35px">该SDK需要授权使用，授权需要提供一下信息：
+</br>1、应用名称
+</br>2、应用包名(applicationId)
+</br>3、应用签名SHA1值，例如：58:28:F7:15:9D:AE:D0:27:55:04:6C:E3:47:87:A0:F3:06:81:77:E6
+</br>请把以上信息发送到邮箱：<a  href="mailto:523716476@qq.com?subject=申请应用授权">523716476@qq.com</a>
+</span>
 ### 网络请求
 
 NetApi.httpClient网络请求对象，可被自定义OkHttpClient对象。当不设置的NetApi.httpClient的时候默认采用以下配置：
@@ -395,3 +401,8 @@ memory:内存缓存和APP同生命周期；
 | saveCache | 永久缓存 | ```{key:"",value:""}``` |  |
 | getCache | 永久缓存 | key                     |  |
 | removeCache | 永久缓存 | key                     |  |
+
+
+
+
+
